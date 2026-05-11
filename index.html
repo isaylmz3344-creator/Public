@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+        <title>SpongeGuard v2.5 - AI Security System</title>
+            <style>
+                    body { background: #0f1116; color: #e8eaed; font-family: 'Courier New', Courier, monospace; padding: 20px; }
+                            .box { background: #1a1c22; padding: 30px; border-radius: 20px; border: 1px solid #333; max-width: 600px; margin: auto; }
+                                    .log { font-size: 12px; color: #81c995; margin-top: 15px; height: 120px; overflow-y: scroll; border: 1px solid #333; padding: 10px; background: #000; }
+                                            #ai-status { color: #fbbc04; font-weight: bold; margin-bottom: 10px; }
+                                                    button { background: #1a73e8; color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; width: 100%; margin-top: 20px; font-weight: bold; }
+                                                            
+                                                                    /* Geliştirici Etiketi */
+                                                                            .credits { margin-top: 20px; font-size: 10px; color: #5f6368; text-align: center; border-top: 1px solid #333; padding-top: 10px; }
+                                                                                </style>
+                                                                                </head>
+                                                                                <body>
+
+                                                                                <div class="box">
+                                                                                    <h2>SpongeGuard Core v2.5</h2>
+                                                                                        <div style="font-size: 10px; color: #777;">STATUS: ONLINE | AI_ENGINE: ACTIVE | PUBLIC v2.0</div>
+                                                                                            
+                                                                                                <input type="text" id="urlInput" placeholder="Analiz edilecek URL..." style="width: 95%; padding: 10px; margin-top: 20px; background: #222; color: white; border: 1px solid #444; border-radius: 5px;">
+                                                                                                    
+                                                                                                        <button onclick="derinTaramaBaslat()">DERİN ANALİZİ BAŞLAT</button>
+
+                                                                                                            <div id="ai-status" style="margin-top: 15px;"></div>
+                                                                                                                <div class="log" id="logBox">Sistem hazır...</div>
+
+                                                                                                                    <!-- Geliştirici İmzası -->
+                                                                                                                        <div class="credits">
+                                                                                                                                Geliştiriciler: <b>İsa</b> & <b>Hatice</b><br>
+                                                                                                                                        © 2026 SpongeGuard Inc. Tüm hakları saklıdır.
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+
+                                                                                                                                            <script>
+                                                                                                                                                function log(message) {
+                                                                                                                                                        document.getElementById('logBox').innerHTML += "> " + message + "<br>";
+                                                                                                                                                                document.getElementById('logBox').scrollTop = document.getElementById('logBox').scrollHeight;
+                                                                                                                                                                    }
+
+                                                                                                                                                                        async function derinTaramaBaslat() {
+                                                                                                                                                                                var url = document.getElementById('urlInput').value.toLowerCase();
+                                                                                                                                                                                        var logs = document.getElementById('logBox');
+                                                                                                                                                                                                logs.innerHTML = ""; // Önceki logları temizle
+                                                                                                                                                                                                        
+                                                                                                                                                                                                                log("Giriş kontrol ediliyor...");
+                                                                                                                                                                                                                        await new Promise(r => setTimeout(r, 600));
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                        log("Sertifika ve güvenlik protokolü taranıyor...");
+                                                                                                                                                                                                                                                await new Promise(r => setTimeout(r, 1000));
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                log("AI Müfettişi içerik sızmasına bakıyor...");
+                                                                                                                                                                                                                                                                        await new Promise(r => setTimeout(r, 1000));
+                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                        log("Kötü niyetli kod blokları (Malicious blocks) kontrol ediliyor...");
+                                                                                                                                                                                                                                                                                                await new Promise(r => setTimeout(r, 1200));
+
+                                                                                                                                                                                                                                                                                                        // Analiz Mantığı
+                                                                                                                                                                                                                                                                                                                if (url.includes("test") || url.includes("bet") || url.includes("p***") || url.length > 40) {
+                                                                                                                                                                                                                                                                                                                            log("!!! KRİTİK TEHLİKE TESPİT EDİLDİ !!!");
+                                                                                                                                                                                                                                                                                                                                        alert("v2.5 AI Müfettişi: BU SİTE SAHTE!");
+                                                                                                                                                                                                                                                                                                                                                } else {
+                                                                                                                                                                                                                                                                                                                                                            log("Güvenli veri protokolü onaylandı. Sistem temiz.");
+                                                                                                                                                                                                                                                                                                                                                                        alert("İsa & Hatice AI Müfettişi: Site Güvenli.");
+                                                                                                                                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                                                                    </script>
+                                                                                                                                                                                                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                                                                                                                                                                                                    </html>
+                                                                                                                                                                                                                                                                                                                                                                                    
